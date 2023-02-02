@@ -67,6 +67,18 @@
         If you want to unsubscribe from this service, just quit the server
         and/or change your password.
       </p>
+      <br />
+      <p>
+        Sources :
+        <br />
+        <a href="https://github.com/Fimeo/ETNA-Notification-Front"
+          >https://github.com/Fimeo/ETNA-Notification-Front</a
+        >
+        <br />
+        <a href="https://github.com/Fimeo/ETNA-Notification"
+          >https://github.com/Fimeo/ETNA-Notification</a
+        >
+      </p>
     </div>
   </div>
 </template>

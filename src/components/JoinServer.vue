@@ -2,13 +2,14 @@
   <div>
     <h2 class="title">Step 2 : join the server</h2>
     <div class="discord-link">
-      <p>Your discord invitation link, valid one day</p>
+      <p>Your discord invitation link, valid once and for one day</p>
       <p>Join ETNA Notification server :</p>
       <div class="link">
         <a :href="discordInvitationLink" class="link-ref" target="_blank">{{
           discordInvitationLink
         }}</a>
       </div>
+      <p>Next, join the server and go to <code>connect</code> channel. Start notifications with  <code>/connect</code> command to validate your discord account.</p>
     </div>
   </div>
 </template>
@@ -50,5 +51,8 @@ export default {
 }
 .link-ref:visited {
   color: #6c4079;
+}
+.link:hover {
+  text-decoration: underline;
 }
 </style>

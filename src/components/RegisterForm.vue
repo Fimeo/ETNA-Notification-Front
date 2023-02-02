@@ -1,15 +1,15 @@
 <script>
-import axios from "axios";
 import ErrorLabel from "@/components/ErrorLabel.vue";
+import axios from "axios";
 
 export default {
   components: { ErrorLabel },
   data() {
     return {
       form: {
-        email: "",
+        login: "",
         password: "",
-        discordAccount: "",
+        discordAccountName: "",
       },
       errorString: "",
     };
@@ -17,12 +17,12 @@ export default {
   methods: {
     submitForm() {
       axios
-        .post("/register", this.form)
+        .post(import.meta.env.VITE_BASE_URL + "/register", this.form)
         .then((resp) => {
-          this.$emit("register", resp.data.link);
+          this.$emit("register", resp.data.invitation);
         })
         .catch((error) => {
-          this.errorString = error.response.data;
+          this.errorString = error.response.data.message;
         });
     },
   },
@@ -35,15 +35,15 @@ export default {
     <div class="row row-space">
       <div class="col">
         <div class="input-group">
-          <label class="label" for="email">Etna email</label>
+          <label class="label" for="email">Etna login</label>
           <input
-            v-model="form.email"
+            v-model="form.login"
             type="text"
-            name="email"
+            name="login"
             class="input-4"
             required
-            placeholder="name_l@etna-alternance.net"
-            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@etna-alternance\.net$"
+            placeholder="name_l"
+            pattern="^[a-zA-Z0-9._]+$"
           />
         </div>
         <div class="input-group">
@@ -57,12 +57,13 @@ export default {
           />
         </div>
         <div class="input-group">
-          <label class="label" for="discordAccount"
+          <label class="label" for="discordAccountName"
             >Discord account with discriminator (#)</label
           >
           <input
             type="text"
-            name="discordAccount"
+            v-model="form.discordAccountName"
+            name="discordAccountName"
             class="input-4"
             required
             placeholder="Name#1234"
