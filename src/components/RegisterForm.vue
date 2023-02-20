@@ -121,6 +121,7 @@ input {
   font-size: 16px;
   color: #666;
   transition: all 0.4s ease;
+  box-sizing: border-box;
 }
 .p15 {
   padding-top: 15px;
