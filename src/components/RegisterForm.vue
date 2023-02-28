@@ -67,7 +67,7 @@ export default {
             class="input-4"
             required
             placeholder="Name#1234"
-            pattern="^[a-zA-Z0-9]+#[0-9]{4}$"
+            pattern="^.{2,32}#[0-9]{4}$"
           />
         </div>
       </div>
