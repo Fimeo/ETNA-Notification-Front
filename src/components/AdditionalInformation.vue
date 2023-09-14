@@ -44,7 +44,7 @@
 
       <p>
         Your login is not your ETNA email but only the identifier. The discord
-        account must specify the discriminator (#).
+        account name is needed.
       </p>
 
       <p>

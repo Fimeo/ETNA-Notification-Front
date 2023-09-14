@@ -66,8 +66,8 @@ export default {
             name="discordAccountName"
             class="input-4"
             required
-            placeholder="Name#1234"
-            pattern="^.{2,32}#[0-9]{4}$"
+            placeholder="Name"
+            pattern="^.{2,32}$"
           />
         </div>
       </div>
