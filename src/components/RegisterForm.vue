@@ -58,7 +58,7 @@ export default {
         </div>
         <div class="input-group">
           <label class="label" for="discordAccountName"
-            >Discord account with discriminator (#)</label
+            >Discord account name (global name)</label
           >
           <input
             type="text"
